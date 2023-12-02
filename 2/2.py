@@ -19,7 +19,7 @@ for game in data:
         for color in colors:
             if color in cube:
                 number = cube.split(" ")[0]
-                if number.isdigit() and int(number) > colors.get(color):
+                if number.isdigit() and int(number) > colors[color]:
                     possible = False
 
     if possible:
