@@ -1,12 +1,11 @@
 data = open("data.txt").readlines()
-cards = [card.split(":") for card in data]
 
 copies = {}
-for i, card in enumerate(cards):
+for i, card in enumerate(data):
     copies[i] = 1
 
-for i, card in enumerate(cards):
-    numbers = card[1].strip().split("|")
+for i, card in enumerate(data):
+    numbers = card.split(":")[1].strip().split("|")
     matching = 0
     cardSum = 0
     for num in numbers[0].split(" "):
